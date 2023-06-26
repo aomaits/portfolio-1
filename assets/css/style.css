@@ -14,35 +14,38 @@ header {
     font-size:2em;
 }
 
-aside {
+.top-section {
+    display: flex;
+    border-radius: 10px;
+    border: solid;
+    border-width: 5px;
+    border-color: rgb(0, 0, 116);
+}
+
+#aside {
     background-color: rgb(240, 240, 215);
     color: rgb(0, 0, 116);
     font-size: large;
     font-weight: bold;
-    border: solid;
-    max-width: 400px;
+    max-width: 25vw;
     float: left;
     margin-top: 3%;
 }
 
 /* this is the image of me */
-.abe_eats {
+#abe_eats {
     max-width: 100%;
     max-height: 100%;
 }
 
-aside ul {
-    text-indent: 2%;
+#aside ul {
+    text-indent: 4%;
 }
 
 .about-me {
     background-color: rgb(240, 240, 215);
     color: rgb(0, 0, 116);
-    margin-left: 25%;
-    padding-top: 5%;
-    padding-bottom: 10%;
-    border-color: rgb(0, 0, 116);
-    border: solid;
+    padding-top: 5%; 
 }
 
 .about-me p{
