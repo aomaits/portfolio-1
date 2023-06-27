@@ -1,17 +1,20 @@
 * {
-    /* I like this color- most of the website should be this color but not all:
-     background-color: rgb(240, 240, 215); */
     font-family: Georgia, 'Times New Roman', Times, serif;
     line-height: 1.5;
+}
+
+:root{
+    --darkblue: rgb(0, 0, 116);
+    --cream: rgb(248, 253, 219);
 }
 
 header {
     position:fixed;
     width: 100%;
     text-align: center;
-    background-color: rgb(0, 0, 116);
-    color: rgb(216, 216, 216);
-    font-size:2em;
+    background-color: var(--darkblue);
+    color: var(--cream);
+    font-size:3em;
 }
 
 .top-section {
@@ -19,59 +22,62 @@ header {
     border-radius: 10px;
     border: solid;
     border-width: 5px;
-    border-color: rgb(0, 0, 116);
+    border-color: var(--darkblue);
 }
 
 #aside {
-    background-color: rgb(240, 240, 215);
-    color: rgb(0, 0, 116);
+    background-color: var(--cream);
+    color: var(--darkblue);
     font-size: large;
     font-weight: bold;
-    max-width: 25vw;
-    float: left;
-    margin-top: 3%;
+    margin-top: 3em;
 }
 
 /* this is the image of me */
 #abe_eats {
     max-width: 100%;
     max-height: 100%;
+    min-width: 400px;
+    min-height: auto;
 }
 
-#aside ul {
-    text-indent: 4%;
+nav ul {
+    text-align: center;
 }
 
-.about-me {
-    background-color: rgb(240, 240, 215);
-    color: rgb(0, 0, 116);
-    padding-top: 5%; 
+#about-me {
+    background-color: var(--cream);
+    color: var(--darkblue); 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: larger;
 }
 
-.about-me p{
-    padding: 2%;
+article h2 {
+    text-align: center;
+    font-size: x-large;
+    margin: 4em 4em 0 4em;
+    padding: 5%;
 }
 
-.my-work {
+#about-me p{
+    padding: 5%;
+    margin: 0 2em 2em 2em;
+    text-align: center;
+}
+
+#my-work {
     display:flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
 }
 
-.my-work:hover {
+#my-work:hover {
     /* placeholder code
     border: green;
     color: yellow; */
-}
-
-#biggest-project {
-    border-style: solid;
-    border-width: 1px;
-    margin: 10px;
-    border-radius: 10px;
-    text-align: center;
-    /* change this color, just a placeholder */
-    background-color: aquamarine;
 }
 
 /* these are the boxes showcasing my work */
@@ -80,7 +86,11 @@ header {
     border-width: 1px;
     display: inline-block;
     border-radius: 10px;
+    border-color: var(--darkblue);
     text-align: center;
+    color: var(--darkblue);
+    background-color: var(--cream);
+    margin:1%;
 }
 
 .work-boxes img {
@@ -88,20 +98,48 @@ header {
     width: 250px;
 }
 
-/* How do I get this box to grow faster and start larger and shrink? */
+.coming-soon:hover {
+    border-color: aqua;
+}
 
-/* #biggest-project img {
-    flex: 2 1 auto;
-    max-width: 1100px;
-}  */
+.hidden h3 {
+    display:none;
+    position: relative;
+    bottom: 4%;
+}
 
-article h2 {
+#biggest-project {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
     text-align: center;
+    justify-content: center;
+    margin: 2% 25%;
+}
+
+#biggest-project img {
+    height: auto;
+    width: 40em;
 }
 
 footer {
     text-align: center;
-    margin-top: 5%;
-    background-color: rgb(240, 240, 215);
-    color: rgb(0, 0, 116);
+    background-color: var(--cream);
+    color: var(--darkblue);
+    margin: 2% 0;
+    border-style: solid;
+    border-width: 1px;
+}
+
+@media screen and (max-width: 667px) {
+    .top-section {flex-wrap: wrap;}
+    #abe_eats {min-width: 100%;}
+    header {font-size: 2em;}
+    #aside {margin-top:2em;}
+    #biggest-project img {height: 250px;
+        width: 250px;}
+}
+
+@media screen and (min-width: 1878px) {
+    #biggest-project {margin: 0 30%;}
 }
