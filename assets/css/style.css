@@ -12,7 +12,7 @@ header {
     position:fixed;
     width: 100%;
     text-align: center;
-    background-color: var(--darkblue);
+    background-image: linear-gradient(to bottom right, var(--darkblue), rgb(105, 0, 0));
     color: var(--cream);
     font-size:3em;
 }
@@ -74,12 +74,6 @@ article h2 {
     align-items: center;
 }
 
-#my-work:hover {
-    /* placeholder code
-    border: green;
-    color: yellow; */
-}
-
 /* these are the boxes showcasing my work */
 .work-boxes {
     border-style: solid;
@@ -98,14 +92,23 @@ article h2 {
     width: 250px;
 }
 
-.coming-soon:hover {
-    border-color: aqua;
+.work-boxes:hover {
+    box-shadow: inset 0 0 10px;
+}
+
+.coming-soon:hover~h3 {
+    display: block;
+    position: relative;
+    bottom: 2%;
+    font-weight: 900;
+    font-size: x-large;
 }
 
 .hidden h3 {
     display:none;
-    position: relative;
-    bottom: 4%;
+    position: absolute;
+    bottom: 40px;
+    z-index: 2;
 }
 
 #biggest-project {
