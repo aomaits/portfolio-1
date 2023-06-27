@@ -20,8 +20,8 @@
 
         <nav>
           <ul>
-            <li> <a href="#about-me">About me</a> </li>
-            <li> <a href="#my-work">My Work</a></li>        
+            <li> <a href="#about-me">About Me</a> </li>
+            <li><a href="#my-work">My Work</a></li>        
             <li> <a href="#hire-me">Contact Me</a></li>
           </ul>
         </nav>
@@ -29,26 +29,30 @@
      
 
       <!-- want to try and put a (skewed) diagonal background item here, use z axis to put it behind, absolute position to keep it locked in place -->
-      <article class="about-me">
+      <article id="about-me">
         <h2> About Me:</h2>
         <p>A junior developer with experience in CSS and HTML, I may just be the perfect fit for your team! I enjoy playing basketball, studying Spanish, and hanging out with my wife, daughter, and dog.</p>
       </article>
     </section>
 
-    <article class="my-work">
+    <article id="my-work">
       <section class="work-boxes" id="biggest-project">
-        <h3>Horiseon Refactor</h3>
-        <img id="computer-picture" src="./assets/computer.jpg" alt="computer on boardroom table">
+        <h3> Horiseon Refactor</h3>
+        <a href="https://aomaits.github.io/horiseon-refactor/" target="_blank"><img id="computer-picture" src="./assets/computer.jpg" alt="computer on boardroom table"></a>
         <p>HTML | CSS </p>
       </section>
       <section class="work-boxes">
         <h3>¡Insectos!</h3>
-        <img src="./assets/insectos.jpg" alt="silhouettes of insects">
+        <a href="https://aomaits.github.io/insectos/" target="_blank"><img src="./assets/insectos.jpg" alt="silhouettes of insects"></a>
         <p>HTML/CSS</p>
       </section>
       <section class="work-boxes">
         <h3>The Website</h3>
-        <img src="./assets/website.jpg" alt="man at obsolete computer terminal">
+        <!-- How do I name these to access them for the hover feature?  -->
+        <article class="hidden">
+          <img class="coming-soon" src="./assets/website.jpg" alt="man at obsolete computer terminal">
+          <h3>Coming Soon!</h3>
+        </article>
         <p>REACT | JAVASCRIPT | CSS</p>
       </section>
       <section class="work-boxes">
