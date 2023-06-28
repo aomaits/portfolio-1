@@ -15,6 +15,7 @@ header {
     background-image: linear-gradient(to bottom right, var(--darkblue), rgb(105, 0, 0));
     color: var(--cream);
     font-size:3em;
+    z-index: 2;
 }
 
 .top-section {
@@ -49,11 +50,13 @@ nav ul {
     background-color: var(--cream);
     color: var(--darkblue); 
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
     justify-content: center;
     font-size: larger;
+    z-index: 1;
 }
 
+/* About me section heading */
 article h2 {
     text-align: center;
     font-size: x-large;
@@ -61,10 +64,28 @@ article h2 {
     padding: 5%;
 }
 
+/* About me text formatting */
 #about-me p{
     padding: 5%;
     margin: 0 2em 2em 2em;
     text-align: center;
+}
+
+/* hidden box to allow for formatting around it */
+#hiddenBox p{
+    visibility: hidden;
+}    
+
+/* this is the gradient background element in the About me section.  */
+#hiddenBox {
+    padding: 0 40%;
+    transform: rotate(18deg);
+    position: relative;
+    bottom: 12em;
+    z-index: -1;
+    border-radius: 15px;
+    background-image: linear-gradient(to top right, var(--cream), rgb(175, 133, 133));
+    ;
 }
 
 #my-work {
@@ -134,15 +155,31 @@ footer {
     border-width: 1px;
 }
 
+@media screen and (max-width:1125px) {
+    #hiddenBox{padding: 1% 30%;}
+}
+
+@media screen and (max-width:780px) {
+    #hiddenBox{padding: 1% 25%;}
+}
+
+@media screen and (max-width:450px) {
+    #hiddenBox{padding: 1% 20%;}
+    #biggest-project {margin: 0;}
+    footer, .work-boxes, .top-section {width: 100%;}
+    .work-boxes, footer, .top-section {margin: 0;}
+}
+
 @media screen and (max-width: 667px) {
     .top-section {flex-wrap: wrap;}
     #abe_eats {min-width: 100%;}
     header {font-size: 2em;}
     #aside {margin-top:2em;}
     #biggest-project img {height: 250px;
-        width: 250px;}
+        width: 250px;} {margin: 2% 0%;} {width:100%;}
+    #hiddenBox{padding: 1% 35%;}
 }
 
 @media screen and (min-width: 1878px) {
-    #biggest-project {margin: 0 30%;}
+    #biggest-project {margin: 0 25%;}
 }
