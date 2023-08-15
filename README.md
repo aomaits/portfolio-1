@@ -1,5 +1,5 @@
 # Abe Omaits' Portfolio v1
-[This portfolio] (https://aomaits.github.io/portfolio-1/) is a collection of early projects with placeholders for more to come later. The intent here was to set up an interactive version of a portfolio combining HTML and CSS prowess. This portfolio was built as a responsive, accessible webpage. 
+[This portfolio](https://aomaits.github.io/portfolio-1/) is a collection of early projects with placeholders for more to come later. The intent here was to set up an interactive version of a portfolio combining HTML and CSS prowess. This portfolio was built as a responsive, accessible webpage. 
 
 Later versions will likely contain not more advanced projects as well as JavaScript interactivity. 
 
